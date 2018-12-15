@@ -6,17 +6,22 @@ public class Auto extends Fahrzeug implements Comparable<Auto>{
     private short airbags;
 
 
-    public Auto(short reifen, String color, short ps, short tueren, int maxSpeed, short airbags) {
-        super(reifen, color, ps, tueren, maxSpeed);
+    enum Color{black,green,white,red,blue}
+    private Color color;
+
+
+    public Auto(short reifen, short ps, short tueren, int maxSpeed, short airbags) {
+        super(reifen, ps, tueren, maxSpeed);
         this.setKlimaanlage(false);
         this.setAirbags(airbags);
+        this.setColor1(Color.green);
     }
 
     @Override
     public String toString()
 
     {
-        return String.format("Mein Auto hat "+this.getPs()+" Ps und fährt mit "+this.getGeschwindigkeit()+" km/h");
+        return String.format("Mein Auto hat "+this.getPs()+" Ps und fährt mit "+this.getGeschwindigkeit()+" km/h"+"und hat die Farbe "+this.getColor1());
 
     }
     public void klimaAn(){
@@ -32,6 +37,11 @@ public class Auto extends Fahrzeug implements Comparable<Auto>{
         }else {
             System.err.println("Klima ist bereits aus");
         }
+    }
+
+    @Override
+    public int compareTo(Auto o) {
+        return getPs() - o.getPs();
     }
 
     public boolean isKlimaanlage() {
@@ -50,9 +60,10 @@ public class Auto extends Fahrzeug implements Comparable<Auto>{
         this.airbags = airbags;
     }
 
-
-    @Override
-    public int compareTo(Auto o) {
-        return getPs() - o.getPs();
+    public void setColor1(Color color) {
+        this.color = color;
+    }
+    public Color getColor1() {
+        return color;
     }
 }

@@ -6,11 +6,11 @@ import java.util.Collections;
 public class Aufruf {
     public static void main(String[] args) {
 
-        Auto bmw = new Auto((short)4,"Silber",(short)220,(short)5,300,(short) 4);
-        Auto vw = new Auto((short)4,"Blau",(short)100,(short)5,300,(short) 4);
-        Auto audi = new Auto((short)4,"Schwarz",(short)180,(short)5,260,(short) 8);
-        Auto mercedes = new Auto((short)4,"Schwarz",(short)120,(short)5,260,(short) 8);
-        Auto honda = new Auto((short)4,"Schwarz",(short)150,(short)5,260,(short) 8);
+        Auto bmw = new Auto((short)4,(short)220,(short)5,300,(short) 4);
+        Auto vw = new Auto((short)4,(short)100,(short)5,300,(short) 4);
+        Auto audi = new Auto((short)4,(short)180,(short)5,260,(short) 8);
+        Auto mercedes = new Auto((short)4,(short)120,(short)5,260,(short) 8);
+        Auto honda = new Auto((short)4,(short)150,(short)5,260,(short) 8);
 
         ArrayList<Auto> autoArrayList = new ArrayList<Auto>();
         autoArrayList.add(bmw);

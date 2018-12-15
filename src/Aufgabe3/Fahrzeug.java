@@ -3,7 +3,6 @@ package Aufgabe3;
 public class Fahrzeug {
 
     private short reifen;
-    private String color;
     private short ps;
     private short tueren;
     private boolean getartet;
@@ -13,9 +12,8 @@ public class Fahrzeug {
 
 
 
-    public Fahrzeug(short reifen, String color, short ps, short tueren, int maxSpeed) {
+    public Fahrzeug(short reifen, short ps, short tueren, int maxSpeed) {
         this.setReifen(reifen);
-        this.setColor(color);
         this.setPs(ps);
         this.setTueren(tueren);
         this.setGetartet(false);
@@ -66,13 +64,6 @@ public class Fahrzeug {
         this.reifen = reifen;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
 
     public short getPs() {
         return ps;
